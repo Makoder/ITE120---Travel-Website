@@ -1,0 +1,74 @@
+/* General content */
+body {
+    background-color: rgba(246, 217, 18, 20%);
+    margin: 0;
+}
+
+/* Heading Banner */
+#header {
+    background-color: rgba(73, 43, 124, 50%);
+    padding: 2em;
+    padding-bottom: 0%;
+}
+
+#heading {
+    font-size: 32px;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: rgba(73, 43, 124, 50%) !important;
+}
+
+/* Slideshow */
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 100vh; /* Set height for the slideshow container */
+    overflow: hidden;
+  }
+  
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;  /* Reduced opacity for all images */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%; /* Adjust the image to cover the entire slide */
+    object-fit: cover; /* Ensure the image covers the slide without distortion */
+}
+
+.current {
+    transform: translateX(0);  /* Current slide stays in place */
+    opacity: 1; /* Active image is fully visible */
+}
+
+.prev {
+transform: translateX(-100%); /* Slide out to the left */
+}
+
+.next {
+transform: translateX(100%); /* Slide in from the right */
+}
+
+.slide-text {
+    position: absolute; /* Position relative to the container */
+    top: 180px;
+    right: 500px;
+    color:white;
+    font-size: 64px;
+    font-weight: bold;
+    z-index: 10; /* Ensure it appears above the images */
+}
+
+/* COLOR CODES (in RGBa)
+PRIMARY (Yellow):  rgba(246, 217, 18, 50%)
+SECONDARY (Purple): rgba(73, 43, 124, 50%)
+ACCENTS (Orange): rgba(237, 138, 10, 50%)
+
+*/
