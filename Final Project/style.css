@@ -18,10 +18,7 @@ body {
     font-size: 32px;
     text-align: center;
 }
-.navbar-expand-lg {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-    z-index: 20;
-}
+
 .bg-light {
     background-color: rgba(73, 43, 124, 1) !important;
 }
@@ -36,6 +33,7 @@ body {
     max-width: 100%;
     height: 94vh; /* Set height for the slideshow container */
     overflow: hidden;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
   }
   
 .slide {
@@ -107,8 +105,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
-    z-index: 99;
 }
 
 /* COLOR CODES (in RGBa)
