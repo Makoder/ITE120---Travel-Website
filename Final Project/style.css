@@ -33,6 +33,7 @@ body {
     max-width: 100%;
     height: 94vh; /* Set height for the slideshow container */
     overflow: hidden;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
   }
   
 .slide {
@@ -77,12 +78,15 @@ transform: translateX(100%); /* Slide in from the right */
     bottom: 0;
     width: 100%;
     height: 25%;
-    background-color: rgba(246, 217, 18, 0.9);
+    background-color: rgba(237, 138, 10, 0.6);
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+
 }
 .overlay p {
     font-size: 24px;
@@ -104,8 +108,8 @@ footer {
 }
 
 /* COLOR CODES (in RGBa)
-PRIMARY (Yellow):  rgba(246, 217, 18, 50%)
-SECONDARY (Purple): rgba(73, 43, 124, 50%)
-ACCENTS (Orange): rgba(237, 138, 10, 50%)
+PRIMARY (Yellow):  rgba(246, 217, 18, 0.5
+SECONDARY (Purple): rgba(73, 43, 124, 0.5)
+ACCENTS (Orange): rgba(237, 138, 10, 0.5)
 
 */
