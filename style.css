@@ -33,6 +33,122 @@ body {
     max-width: 100%;
     height: 94vh; /* Set height for the slideshow container */
     overflow: hidden;
+  }
+  
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;  /* Reduced opacity for all images */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%; /* Adjust the image to cover the entire slide */
+    object-fit: cover; /* Ensure the image covers the slide without distortion */
+}
+
+.current {
+    transform: translateX(0);  /* Current slide stays in place */
+    opacity: 1; /* Active image is fully visible */
+}
+
+.prev {
+    transform: translateX(-100%); /* Slide out to the left */
+}
+
+.next {
+transform: translateX(100%); /* Slide in from the right */
+}
+
+.slide-text {
+    position: absolute; /* Position relative to the container */
+    top: 180px;
+    right: 500px;
+    color:white;
+    font-size: 64px;
+    font-weight: bold;
+    z-index: 10; /* Ensure it appears above the images */
+}
+
+.overlay {
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+    background-color: rgba(237, 138, 10, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.overlay p {
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height:2em;
+}
+
+@media (max-width: 1200px) {
+    .overlay-text {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+/*Footer Section*/
+footer {
+    position: fixed;
+    bottom:0;
+    left:0;
+    height:50px;
+    width: 100%;
+    background-color: rgba(73, 43, 124, 1);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* COLOR CODES (in RGBa)
+PRIMARY (Yellow):  rgba(246, 217, 18, 50%)
+SECONDARY (Purple): rgba(73, 43, 124, 50%)
+ACCENTS (Orange): rgba(237, 138, 10, 50%)
+
+=======
+/* General content */
+body {
+    background-color: rgba(246, 217, 18, 20%);
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    flex: 1;
+    padding-bottom: 50px;
+}
+
+/* Heading Banner */
+#header {
+    background-color: rgba(73, 43, 124, 50%);
+    padding: 2em;
+    padding-bottom: 0%;
+}
+
+#heading {
+    font-size: 32px;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: rgba(73, 43, 124, 1) !important;
+}
+.navbar-brand, .nav-link {
+    color: rgba(255, 2255, 255, 0.8) !important;
+}
+
+
+/* Slideshow Overlay*/
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 94vh; /* Set height for the slideshow container */
+    overflow: hidden;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
   }
   
