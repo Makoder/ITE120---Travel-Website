@@ -206,7 +206,6 @@ transform: translateX(100%); /* Slide in from the right */
 .overlay p {
     font-size: 2rem;
     padding: 20px;
-
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
