@@ -1,4 +1,10 @@
 /* General content */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgba(246, 217, 18, 20%);
     margin: 0;
@@ -30,10 +36,10 @@ body {
     box-shadow: 2px 2px 10px black;
 }
 .nav-link:hover, .nav-link.active {
-    font-weight: bold;
-    background-color: rgb(59, 14, 136);
+    color:  rgba(73, 43, 124, 1) !important;
+    background-color: antiquewhite;
     border-radius: 15%;
-    color: white;
+    box-shadow: 1em 1em 2em black ;
 }
 
 /* Slideshow Overlay*/
@@ -42,7 +48,6 @@ body {
     max-width: 100%;
     text-align: center;
     height: 94vh; /* Set height for the slideshow container */
-    overflow: hidden;
     box-shadow: 2px 2px 10px black;
     z-index: 1;
   }
@@ -75,9 +80,9 @@ transform: translateX(100%); /* Slide in from the right */
 }
 
 .slide-title {
-    position: absolute;
+    text-align: center  ;
+    position: relative;
     top: 25%;
-    right: 25%;
     color:white;
     font-size: 64px;
     font-weight: bold;
@@ -98,7 +103,7 @@ transform: translateX(100%); /* Slide in from the right */
     background-color: rgba(237, 138, 10, 0.6);
     padding: 20px;
     z-index: 1; /* Set z-index higher than the slideshow container */
-    box-shadow: 0px -4px 10px black, 0px 10px 1px rgba(237, 138, 10, 0.6);
+    box-shadow: 0px -4px 10px black, 0 0.05em 0 rgba(237, 138, 10, 1);
 }
 .overlay p {
     font-size: 1.8rem;
