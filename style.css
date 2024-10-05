@@ -125,8 +125,6 @@ transform: translateX(100%); /* Slide in from the right */
 .highlight-container {
     display: flex;
     justify-content: space-evenly;
-    align-items: end;
-    
 }
 /*Footer Section*/
 footer {
