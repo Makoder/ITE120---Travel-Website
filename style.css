@@ -1,3 +1,12 @@
+/*Resetting Page*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
 /* General content */
 body {
     background-color: rgba(246, 217, 18, 20%);
