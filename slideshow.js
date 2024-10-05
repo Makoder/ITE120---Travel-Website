@@ -23,5 +23,5 @@ function showSlides() {
   slideIndex = (slideIndex + 1) % slides.length;
 
   // Set the timer for the next slide change
-  setTimeout(showSlides, 10000);
+  setTimeout(showSlides, 5000);
 }
