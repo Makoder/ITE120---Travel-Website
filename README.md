@@ -50,5 +50,6 @@ User Experience (10%)
 - Adding Responsivity for highlights
 - Improve design for highlight
 - Make title for highlight stand out more
-
+- Fix alignment for navbar
+- Fix Page length (not cards)
    
