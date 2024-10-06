@@ -46,6 +46,9 @@ User Experience (10%)
   - Contact
      - Important Phone Numbers
 
-## Colour - HEX Code
+## Upcoming Changes 
+- Adding Responsivity for highlights
+- Improve design for highlight
+- Make title for highlight stand out more
 
    
