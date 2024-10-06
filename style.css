@@ -18,7 +18,6 @@ body {
     background-color: rgba(73, 43, 124, 50%);
     padding: 2em;
 }
-
 .bg-light {
     background-color: rgba(73, 43, 124, 1) !important;
     padding-bottom: 0.5em;
@@ -28,11 +27,9 @@ body {
     font-size: 1rem;
     font-weight: bolder;
 }
-
 .nav-item {
     margin-right: 10em;
 }
-
 .navbar-expand-lg {
     z-index: 99;
     box-shadow: 0 0.2em 1em black;
@@ -70,7 +67,6 @@ body {
     75% {left: -300%;}
     95% {left: -300%;} 
     100% {left: -400%;} 
-
 }
 .slide-title {
     text-align: center ;
@@ -84,7 +80,6 @@ body {
     z-index: 2; /* Ensure it appears above the images */
     text-shadow: -4px 4px 10px black;
 }
-
 .overlay {
     position: absolute;
     bottom: 0;
