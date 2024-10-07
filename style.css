@@ -153,6 +153,15 @@ footer {
     box-shadow: 2px -2px 10px black;
     z-index: 99;
 }
+/*----- Tourist Hotspots -----*/
+
+
+/*----- Thai Culture -----*/
+
+
+/*----- Information / Contact / Visas -----*/
+
+
 /*----- Media Queries for Responsivity */
 @media (max-width: 1692px) {
     .highlight-container {
