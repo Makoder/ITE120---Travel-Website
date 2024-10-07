@@ -1,33 +1,207 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="UTF-8" />
-            <title>Bangkok's Travel Guide</title>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-            <link rel="stylesheet" href="style.css" />
-        </head>
+<html lang="en">
 
-        <body>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Culture - Thailand's Rich Heritage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
 
-           <!--Banner and navigation menu-->
-           <nav class="navbar navbar-expand-lg bg-light">
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="hotspot.html">Tourist Hotspots</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="culture.html">Thai Culture</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Information</a>
-                        </li>
-                    </ul>
+        /* Culture Section */
+        .culture-section {
+            background-image: url('https://www.dailyartmagazine.com/wp-content/uploads/2021/10/The-Khon-Classical-Thai-Mask-Dance-show-hero.LUT-OPT-D-scaled.jpg'); /* Culture section image */
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .culture-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .culture-section p {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Info Section */
+        .info-section {
+            background-image: url('https://www.dailyartmagazine.com/wp-content/uploads/2020/07/Thai-Classical-Dance-Khon-Puppet-at-Asia-Society-New-York-musical-instruments.LUT-OPT-1024x621.jpg'); /* Info section image */
+            background-size: cover;
+            background-position: center;
+            color: white; /* Change text color for better visibility */
+            padding: 50px 0; /* Add padding for spacing */
+        }
+
+        .info-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: #007bff;
+        }
+
+        .info-section .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for cards */
+        }
+
+        .info-section .card img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .info-section .card-body {
+            padding: 20px;
+        }
+
+        .info-section .card-title {
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333; /* Change to solid color */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Traveller's Guide to Thailand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="hotspot.html">Tourist Hotspots</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="culture.html">Culture</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Information</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Thai Culture Section -->
+    <section class="culture-section">
+        <h1>Discover the Rich Tradition & Culture of Thailand</h1>
+        <p>
+            Thailand, often referred to as the "Land of Smiles," has a deep-rooted culture that reflects its history,
+            traditions, and belief systems. At the heart of Thai culture lies a reverence for family, religion, and respect for
+            others, principles that are mirrored in the everyday life of its people. The main religion, Theravada Buddhism, has
+            greatly influenced Thai customs, from traditional festivals to the art of respect embodied in the "Wai" greeting.
+            The country's art, dance, and architecture also showcase its cultural richness, with exquisite temples, intricate
+            sculptures, and colorful festivals like Songkran and Loi Krathong.
+            <br /><br />
+            Traditional Thai art, including classical dance and puppet performances, remains an integral part of the country’s
+            heritage. Khon performances, elaborate masks, and graceful dance movements bring ancient epics like the
+            Ramakien to life. Thai cuisine, known for its harmony of flavors, and the practice of Muay Thai, the country’s
+            national sport, further demonstrate the diversity of its traditions. Thailand's culture is a reflection of its
+            people's warmth, spiritual depth, and love for harmonious living.
+        </p>
+    </section>
+
+    <!-- Additional Cultural Information Section -->
+    <section class="container info-section">
+        <h2>Explore More About Thai Culture</h2>
+        <div class="row">
+            <!-- Thai Festivals -->
+            <div class="col-md-4 text-center">
+                <div class="card">
+                    <img src="Media/songkran.jpg" class="card-img-top" alt="Songkran Festival">
+                    <div class="card-body">
+                        <h5 class="card-title">Songkran Festival</h5>
+                        <p class="card-text">
+                            Thailand's New Year festival, celebrated with water fights and family reunions.
+                        </p>
+                        <a href="https://www.tourismthailand.org/Events-and-Festivals/Songkran" target="_blank"
+                            class="btn btn-primary">Learn More</a>
+                    </div>
                 </div>
-            </nav>
+            </div>
 
-        </body>
-    </html>
+            <!-- Thai Traditional Dance -->
+            <div class="col-md-4 text-center">
+                <div class="card">
+                    <img src="Media/thai-dance.jpg" class="card-img-top" alt="Thai Traditional Dance">
+                    <div class="card-body">
+                        <h5 class="card-title">Thai Traditional Dance</h5>
+                        <p class="card-text">
+                            Graceful performances that depict epic stories through intricate hand gestures and costumes.
+                        </p>
+                        <a href="https://www.tourismthailand.org/Attraction/Thai-Dance" target="_blank"
+                            class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thai Cuisine -->
+            <div class="col-md-4 text-center">
+                <div class="card">
+                    <img src="Media/thai-cuisine.jpg" class="card-img-top" alt="Thai Cuisine">
+                    <div class="card-body">
+                        <h5 class="card-title">Thai Cuisine</h5>
+                        <p class="card-text">
+                            Known for its balance of sweet, sour, salty, and spicy flavors, Thai food is a culinary delight.
+                        </p>
+                        <a href="https://www.tourismthailand.org/Attraction/Thai-Cuisine" target="_blank"
+                            class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Traveller's Guide to Thailand | Find the source code at 
+            <a href="https://github.com/Makoder/ITE120---Travel-Website" target="_blank">GitHub</a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12W9gOAafl5+Dyoz23+i3TcI08LNkfn/tA1MZKI2tbQVPZWp" crossorigin="anonymous"></script>
+</body>
+
+</html>
