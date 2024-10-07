@@ -46,6 +46,4 @@ User Experience (10%)
   - Contact
      - Important Phone Numbers
 
-## Colour - HEX Code
-
    
