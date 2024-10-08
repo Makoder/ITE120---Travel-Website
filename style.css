@@ -1,9 +1,11 @@
 /*----- General content -----*/
 * {
-/* Page Reset */
+/*----- Page Reset -----*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
 }
 
 body {
@@ -15,33 +17,65 @@ body {
 }
 
 /*----- Heading Banner -----*/
-.bg-light {
-    /* Alters the banner */
+nav {
+    background-color: rgba(73, 43, 124, 1);
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1.2rem;
+
+}
+nav a {
+    color: white;
+    padding: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.toggler {
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+.active a, nav a:hover {
+    background-color: white;
+    border-radius: 10%;
+    color: rgba(73, 43, 124, 1);
+    box-shadow: 0.5em 0.5em 2em black;
+}
+
+
+/* .bg-light {
+ 
     background-color: rgba(73, 43, 124, 1) !important;
     padding-bottom: 0.5em;
 }
 .nav-link {
-    /* Alters the menu items */
     color: rgba(255, 255, 255, 0.8) !important;
     font-size: 1rem;
     font-weight: bolder;
 }
 .nav-item {
-    /* Spaces out the menu items */
     margin-right: 20em;
 }
 .navbar-expand-lg {
-    /* Adds shadows to the navbar */
+
     z-index: 2;
     box-shadow: 0 0.2em 1em black;
 }
 .nav-link:hover, .nav-link.active {
-    /* Changes the color of the menu items on hover */
     color:  rgba(73, 43, 124, 1) !important;
     background-color: antiquewhite;
     border-radius: 15%;
     box-shadow: 1em 0em 2em black ;
-}
+} */
 
 /*----- Slideshow -----*/
 #slideshow {
@@ -187,9 +221,25 @@ footer {
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
     .slide-title {
         font-size: 48px;
+    }
+    nav ul {
+        padding: 0.5rem;
+        flex-wrap: wrap;
+    }
+    .toggler {
+        display: flex;
+    }
+    nav li {
+        display: none;
+        width: 100%;
+        margin: 0.5rem;
+        text-align: center;
+    }
+    .switch {
+        display: block;
     }
 }
 @media (max-width: 480px) {
