@@ -9,69 +9,66 @@
         </head>
 
         <body>
-
             <!--Banner and navigation menu-->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="hotspot.html">Tourist Hotspots</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="culture.html">Thai Culture</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Information</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="hotspot.html">Tourist Hotspots</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="culture.html">Thai Culture</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Information</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+                
             <!--Image slideshow-->
-            <div class="slideshow-container">
-                <div class="slide current">
-                    <img src="Media/temple.jpg  " alt="a temple during nightime"/>
-                </div>
-                <div class="slide">
-                    <img src="Media/city.jpg" alt="Nightlife of bamgkok">
-                </div>
-                <div class="slide">
-                    <img src="Media/islands.jpg" alt="Islands of thailand">
-                </div>
-
+            <section id="slideshow">
+                <figure>
+                    <img src="Media/temple.jpg" alt="A temple in Bangkok"/>
+                    <img src="Media/islands.jpg" alt="Some of Thailand's beaches"/>
+                    <img src="Media/city.jpg" alt="Bangkok's night life"/>
+                    <img src="Media/fog.jpg" alt="Bangkok's Skyline during daytime"/>
+                    <img src="Media/temple.jpg" alt="A temple in Bangkok"/>
+                </figure>
                 <h1 class="slide-title">A Traveller's Guide to Thailand</h1>
-            </div>     
-                       
-            <div class="overlay">
-                <p class="opening">Explore Thailand's rich history and culture. From the bustling streets of Bangkok and the vast temples of Ayutthaya to the beautiful beaches of Koh Phangan and the heavenly waterfalls in Chiang Mai, our site is here to help you uncover the secrets of the Land of Smiles. Whether you're a seasoned traveler or a first-time visitor, learn the basics of Thai culture, discover beautiful places to visit, and prepare for your wonderful trip to Thailand.  </p>
-            </div>
+                <div class="overlay">
+                    <p class="opening">Explore Thailand's rich history and culture. Whether you're a seasoned traveler or a first-time visitor, learn the basics of Thai culture, discover beautiful places to visit, and prepare for your wonderful trip to Thailand.  </p>
+                </div>
+            </section>
             <br />
-            <h2>Highlights</h2>
+            
+            <!-- Highlight Section -->
+            <h2 class="highlight">Highlights</h2>
             <div class="highlight-container">
                 <div class="highlight-element">
-                    <img src="#" alt="">
                     <h3>Temples</h3>
-                    <p>Temple</p>
+                    <a href="https://www.klook.com/blog/best-temples-thailand/" target="_blank"><img src="Media/wat-pho.jpg" alt="Wat Pho temple"/></a>
+                    <p>Enter Thailand's ancient temple showcasing their intricate architecture and serene landscapes.</p>
                 </div>
                 <div class="highlight-element">
-                    <img src="#" alt="">
                     <h3>Walking Streets</h3>
-                    <p>Walking Streets</p>
+                    <a href="https://www.viehotelbangkok.com/bangkok-attractions/bkk-walking-street/" target="_blank"><img src="Media/walking-street.jpg" alt="Wat Pho temple"/></a>
+                    <p>Walk the streets of Thailand, where you can find anything ranging from food to clothes to entertainment.</p>
                 </div>
                 <div class="highlight-element">
-                    <img src="#" alt="">
                     <h3>Beaches</h3>
-                    <p>Beaches</p>
+                    <a href="https://th.hotels.com/go/thailand/best-thailand-beaches" target="_blank"><img src="Media/beaches.jpg" alt="Wat Pho temple"/></a>
+                    <p>Explore some of Thailand's beautiful beaches such as Tong Nai Pan, Krabi or Koh Phi Phi island.</p>
                 </div>
 
             </div>
 
-            <footer>&copy 2024 Traveller's Guide to Thailand | Find the source code at https://github.com/Makoder/ITE120---Travel-Website</footer>
+            <footer>&copy 2024 Traveller's Guide to Thailand | Find the source code on <a href="https://github.com/Makoder/ITE120---Travel-Website" target="_blank">GitHub</a> or <a href="mailto=#">email us</a></footer>
+            
+
             
         </body>
-
-        <script src="slideshow.js"></script>
     </html>
