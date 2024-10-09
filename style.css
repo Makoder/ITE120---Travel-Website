@@ -1,46 +1,52 @@
 /*----- General content -----*/
 * {
-/* Page Reset */
+/*----- Page Reset -----*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
 }
 
 body {
-/*  General formatting */
     background-color: rgba(246, 217, 18, 20%);
     margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding-bottom: 3em; /* Must be equal or higher to footer*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
 
 /*----- Heading Banner -----*/
-.bg-light {
-    /* Alters the banner */
-    background-color: rgba(73, 43, 124, 1) !important;
-    padding-bottom: 0.5em;
+nav {
+    background-color: rgba(73, 43, 124, 1);
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
 }
-.nav-link {
-    /* Alters the menu items */
-    color: rgba(255, 255, 255, 0.8) !important;
-    font-size: 1rem;
-    font-weight: bolder;
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1.2rem;
+
 }
-.nav-item {
-    /* Spaces out the menu items */
-    margin-right: 20em;
+nav a {
+    color: white;
+    padding: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
-.navbar-expand-lg {
-    /* Adds shadows to the navbar */
-    z-index: 2;
-    box-shadow: 0 0.2em 1em black;
+.toggler {
+    cursor: pointer;
+    display: none;
+    color: white;
 }
-.nav-link:hover, .nav-link.active {
-    /* Changes the color of the menu items on hover */
-    color:  rgba(73, 43, 124, 1) !important;
-    background-color: antiquewhite;
-    border-radius: 15%;
-    box-shadow: 1em 0em 2em black ;
+.active a, nav a:hover {
+    background-color: white;
+    border-radius: 10%;
+    color: rgba(73, 43, 124, 1);
+    box-shadow: 0.5em 0.5em 2em black;
 }
 
 /*----- Slideshow -----*/
@@ -112,6 +118,8 @@ body {
     justify-content: space-evenly;
 }
 .highlight-element {
+    align-items: center;
+    justify-content: center;
     border: 0.1em solid rgba(73, 43, 124, 1);
     background-color: rgba(73, 43, 124, 0.5);
     border-radius: 3%;
@@ -144,23 +152,114 @@ body {
 }
 /*---- Footer Section ----*/
 footer {
-    position: fixed;
+    position: relative;
+    bottom: 0;
     font-size: 1.2rem;
-    bottom:0;
     height:3em;
     width: 100%;
     background-color: rgba(73, 43, 124, 1);
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 1em;
     box-shadow: 2px -2px 10px black;
     z-index: 99;
 }
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 0.1em;
+}
+footer a:hover {
+    background-color: white;
+    border-radius: 15%;
+    color: rgba(73, 43, 124, 1);
+}
 /*----- Tourist Hotspots -----*/
+body {
+    background-image: url('data:image/jpeg;base64,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');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
 
+#travel-tips {
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/14/03/16/thailand-1823193_960_720.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: white;
+}
+
+#travel-tips h2, #travel-tips p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#travel-tips p {
+    width: 80%;
+    margin: 0 auto;
+}
 
 /*----- Thai Culture -----*/
+.culture-section {
+    background-image: url('https://www.dailyartmagazine.com/wp-content/uploads/2021/10/The-Khon-Classical-Thai-Mask-Dance-show-hero.LUT-OPT-D-scaled.jpg'); /* Culture section image */
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
 
+.culture-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.culture-section p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Info Section */
+.info-section {
+    background-image: url('https://www.dailyartmagazine.com/wp-content/uploads/2020/07/Thai-Classical-Dance-Khon-Puppet-at-Asia-Society-New-York-musical-instruments.LUT-OPT-1024x621.jpg'); /* Info section image */
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    padding: 50px 0; 
+}
+
+.info-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.info-section .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for cards */
+}
+
+.info-section .card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.info-section .card-body {
+    padding: 20px;
+}
+
+.info-section .card-title {
+    font-size: 1.5rem;
+    color: #007bff;
+}
 
 /*----- Information / Contact / Visas -----*/
 
@@ -171,13 +270,7 @@ footer {
         flex-direction: column;
     }
 } 
-@media (max-width: 1128px) {
-    .overlay {
-        padding: 10px;
-        box-shadow: 0  2em 0 rgba(237, 138, 10, 0.6);
-    }
     
-}
 @media (max-width: 992px) {
     .overlay p {
         font-size: 1.6rem;
@@ -187,9 +280,25 @@ footer {
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
     .slide-title {
         font-size: 48px;
+    }
+    nav ul {
+        padding: 0.5rem;
+        flex-wrap: wrap;
+    }
+    .toggler {
+        display: flex;
+    }
+    nav li {
+        display: none;
+        width: 100%;
+        margin: 0.5rem;
+        text-align: center;
+    }
+    .switch {
+        display: block;
     }
 }
 @media (max-width: 480px) {
