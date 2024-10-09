@@ -1,184 +1,156 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="UTF-8" />
-            <title>Bangkok's Travel Guide</title>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-            <link rel="stylesheet" href="style.css" />
-            
-        </head>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Bangkok's Travel Guide</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-
-        <body>
-
-            <!--Banner and navigation menu-->
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="hotspot.html">Tourist Hotspots</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="culture.html">Thai Culture</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Information</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <section class="container mt-5">
-                <h1 class="text-center">Popular Tourist Hotspots</h1>
-                <p class="text-center">Explore some of the most iconic destinations that attract millions of tourists each year.</p>
-                <div class="row">
-                    <!-- Wat Arun Hotspot -->
-                    <div class="col-md-4 text-center">
-                        <div class="card">
-                            <img src="Media/wat-arun.jpg" class="card-img-top" alt="Wat Arun Temple">
-                            <div class="card-body">
-                                <h5 class="card-title">Wat Arun</h5>
-                                <p class="card-text">Known as the Temple of Dawn, Wat Arun is one of Bangkok’s most iconic landmarks.</p>
-                                <a href="https://www.tourismthailand.org/Attraction/Wat-Arun" target="_blank" class="btn btn-primary">Visit Site</a>
-                                <button onclick="showDetails('Wat Arun')" class="btn btn-secondary">More Details</button>
-                            </div>
-                        </div>
-                    </div>
+       <style>
+        body {
+            background-image: url('data:image/jpeg;base64,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');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
     
-                    <!-- Grand Palace Hotspot -->
-                    <div class="col-md-4 text-center">
-                        <div class="card">
-                            <img src="Media/grand-palace.jpg" class="card-img-top" alt="The Grand Palace">
-                            <div class="card-body">
-                                <h5 class="card-title">The Grand Palace</h5>
-                                <p class="card-text">A must-see historical landmark in Thailand, housing the revered Emerald Buddha.</p>
-                                <a href="https://www.tourismthailand.org/Attraction/The-Grand-Palace" target="_blank" class="btn btn-primary">Visit Site</a>
-                                <button onclick="showDetails('The Grand Palace')" class="btn btn-secondary">More Details</button>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Chatuchak Market Hotspot -->
-                    <div class="col-md-4 text-center">
-                        <div class="card">
-                            <img src="Media/chatuchak.jpg" class="card-img-top" alt="Chatuchak Weekend Market">
-                            <div class="card-body">
-                                <h5 class="card-title">Chatuchak Weekend Market</h5>
-                                <p class="card-text">One of the largest markets in the world, offering a wide variety of goods and foods.</p>
-                                <a href="https://www.tourismthailand.org/Attraction/Chatuchak-Market" target="_blank" class="btn btn-primary">Visit Site</a>
-                                <button onclick="showDetails('Chatuchak Market')" class="btn btn-secondary">More Details</button>
-                            </div>
+        #travel-tips {
+            background-image: url('https://cdn.pixabay.com/photo/2016/11/14/03/16/thailand-1823193_960_720.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 50px 0;
+            color: white;
+        }
+
+        #travel-tips h2, #travel-tips p {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        #travel-tips p {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+        <!-- Banner and navigation menu -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="hotspot.html">Tourist Hotspots</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="culture.html">Thai Culture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Information</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <section class="container mt-5">
+            <h1 class="text-center">Popular Tourist Hotspots</h1>
+            <p class="text-center">Explore some of the most iconic destinations that attract millions of tourists each year.</p>
+            <div class="row">
+                <!-- Wat Arun Hotspot -->
+                <div class="col-md-4 text-center">
+                    <div class="card">
+                        <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Wat Arun Temple">
+                        <div class="card-body">
+                            <h5 class="card-title">Wat Arun</h5>
+                            <p class="card-text">Known as the Temple of Dawn, Wat Arun is one of Bangkok’s most iconic landmarks.</p>
+                            <a href="https://www.wat-arun.com/" target="_blank" class="btn btn-primary">Visit Site</a>
+                            <button onclick="showDetails('Wat Arun')" class="btn btn-secondary">More Details</button>
                         </div>
                     </div>
                 </div>
-            </section>
-    
-          <!-- Day Trips Section -->
+
+                <!-- Grand Palace Hotspot -->
+                <div class="col-md-4 text-center">
+                    <div class="card">
+                        <img src="https://i0.wp.com/zeweekendtraveller.com/wp-content/uploads/2022/11/PXL_20221028_050012247.MP_.jpg?fit=2048%2C1565&ssl=1" class="card-img-top" alt="The Grand Palace">
+                        <div class="card-body">
+                            <h5 class="card-title">The Grand Palace</h5>
+                            <p class="card-text">A must-see historical landmark in Thailand, housing the revered Emerald Buddha.</p>
+                            <a href="https://www.tripadvisor.com/Attraction_Review-g293916-d317603-Reviews-The_Grand_Palace-Bangkok.html" target="_blank" class="btn btn-primary">Visit Site</a>
+                            <button onclick="showDetails('The Grand Palace')" class="btn btn-secondary">More Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chatuchak Market Hotspot -->
+                <div class="col-md-4 text-center">
+                    <div class="card">
+                        <img src="https://www.pelago.com/img/products/TH-Thailand/shop-till-you-drop-at-chatuchak-weekend-market-bangkok/fb6148c9-8430-4006-a46d-ce13d721a78a_shop-till-you-drop-at-chatuchak-weekend-market-bangkok.jpg" class="card-img-top" alt="Chatuchak Weekend Market">
+                        <div class="card-body">
+                            <h5 class="card-title">Chatuchak Weekend Market</h5>
+                            <p class="card-text">One of the largest markets in the world, offering a wide variety of goods and foods.</p>
+                            <a href="https://www.tripadvisor.com/Attraction_Review-g293916-d450971-Reviews-Chatuchak_Weekend_Market-Bangkok.html" target="_blank" class="btn btn-primary">Visit Site</a>
+                            <button onclick="showDetails('Chatuchak Market')" class="btn btn-secondary">More Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- 10 Recommended Things to Do -->
 <section class="container mt-5">
-    <h2 class="text-center">Day Trips</h2>
-    <p class="text-center">Short getaways from Bangkok to nearby attractions.</p>
-    <div class="row">
-        <div class="col-md-4 text-center">
-            <div class="card">
-                <img src="Media/ayutthaya.jpg" class="card-img-top" alt="Ayutthaya Historical Park">
-                <div class="card-body">
-                    <h5 class="card-title">Ayutthaya Historical Park</h5>
-                    <p>Discover the ancient city of Ayutthaya, a UNESCO World Heritage Site just an hour away from Bangkok.</p>
-                    <a href="https://www.tourismthailand.org/Attraction/Ayutthaya-Historical-Park" class="btn btn-primary" target="_blank">Learn More</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 text-center">
-            <div class="card">
-                <img src="Media/floating-market.jpg" class="card-img-top" alt="Damnoen Saduak Floating Market">
-                <div class="card-body">
-                    <h5 class="card-title">Damnoen Saduak Floating Market</h5>
-                    <p>Experience the vibrant floating markets, where vendors sell goods from their boats.</p>
-                    <a href="https://www.tourismthailand.org/Attraction/Damnoen-Saduak-Floating-Market" class="btn btn-primary" target="_blank">Learn More</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 text-center">
-            <div class="card">
-                <img src="Media/kanchanaburi.jpg" class="card-img-top" alt="Bridge over the River Kwai">
-                <div class="card-body">
-                    <h5 class="card-title">Kanchanaburi - Bridge over the River Kwai</h5>
-                    <p>Visit the historical site of the infamous WWII railway bridge in Kanchanaburi.</p>
-                    <a href="https://www.tourismthailand.org/Attraction/The-Bridge-over-the-River-Kwai" class="btn btn-primary" target="_blank">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h2 class="text-center">10 More Recommended Things to Do</h2>
+    <ol>
+        <li>Take a sunset cruise on the Chao Phraya River.
+            <a href="https://www.bangkok.com/canal-cruise/" target="_blank" class="btn btn-primary btn-sm">Learn More</a>
+        </li>
+        <li>Visit the Erawan Shrine for a spiritual experience.
+            <a href="https://www.bangkok.com/shrines/erawan-shrine.htm" target="_blank" class="btn btn-primary btn-sm">Learn More</a>
+        </li>
+        <li>Explore Chinatown’s vibrant food scene.
+            <a href="https://www.bangkok.com/attraction-chinatown/" target="_blank" class="btn btn-primary btn-sm">Learn More</a>
+        </li>
+        <li>Take a cooking class and learn to make authentic Thai dishes.
+            <a href="https://www.bangkok.com/cooking-classes/" target="_blank" class="btn btn-primary btn-sm">Learn More</a>
+        </li>
+        <li>Enjoy street food at Yaowarat Road.
+            <a href="https://www.bangkok.com/magazine/yaowarat-street-food.htm" target="_blank" class="btn btn-primary btn-sm">Learn More</a>
+        </li>
+        <li>Climb the Golden Mount for a panoramic view of the city.
+            <a href="https://www.bangkok.com/temples/golden-mount.htm" target="_blank" class="btn btn-primary btn-sm">Learn More</a>
+        </li>
+        <li>Discover contemporary art at the Bangkok Art and Culture Centre.
+            <a href="https://www.bacc.or.th/" target="_blank" class="btn btn-primary btn-sm">Learn More</a>
+        </li>
+        <li>Shop luxury brands at ICONSIAM or MBK Center for local goods.
+            <a href="https://www.iconsiam.com/en" target="_blank" class="btn btn-primary btn-sm">Learn More</a>
+        </li>
+        <li>Catch a traditional Thai dance performance at the National Theatre.
+            <a href="https://www.timeout.com/bangkok/attractions/national-theatre" target="_blank" class="btn btn-primary btn-sm">Learn More</a>
+        </li>
+        <li>Relax and rejuvenate with a Thai massage at a local spa.
+            <a href="https://www.bangkok.com/magazine/thai-massage.htm" target="_blank" class="btn btn-primary btn-sm">Learn More</a>
+        </li>
+    </ol>
 </section>
 
-         <!-- Family-Friendly Activities Section -->
-<section class="container mt-5">
-    <h2 class="text-center">Family-Friendly Activities</h2>
-    <div class="row">
-        <div class="col-md-4 text-center">
-            <div class="card">
-                <img src="Media/siam-ocean-world.jpg" class="card-img-top" alt="Siam Ocean World">
-                <div class="card-body">
-                    <h5 class="card-title">Siam Ocean World</h5>
-                    <p>One of Southeast Asia’s largest aquariums, featuring over 30,000 marine creatures.</p>
-                    <a href="https://www.tourismthailand.org/Attraction/Siam-Ocean-World" class="btn btn-primary" target="_blank">Learn More</a>
-                </div>
-            </div>
-        </div>
+        <!-- Footer -->
+        <footer class="text-center mt-5 py-3 bg-light">
+            &copy 2024 Traveller's Guide to Thailand | Find the source code at 
+            <a href="https://github.com/Makoder/ITE120---Travel-Website" target="_blank">GitHub</a>
+        </footer>
 
-        <div class="col-md-4 text-center">
-            <div class="card">
-                <img src="Media/safari-world.jpg" class="card-img-top" alt="Safari World">
-                <div class="card-body">
-                    <h5 class="card-title">Safari World</h5>
-                    <p>A popular wildlife park offering a safari experience, marine park, and entertaining animal shows.</p>
-                    <a href="https://www.tourismthailand.org/Attraction/Safari-World" class="btn btn-primary" target="_blank">Learn More</a>
-                </div>
-            </div>
-        </div>
+        <!-- Bootstrap JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12W9gOAafl5+Dyoz23+i3TcI08LNkfn/tA1MZKI2tbQVPZWp" crossorigin="anonymous"></script>
 
-        <div class="col-md-4 text-center">
-            <div class="card">
-                <img src="Media/lumphini-park.jpg" class="card-img-top" alt="Lumphini Park">
-                <div class="card-body">
-                    <h5 class="card-title">Lumphini Park</h5>
-                    <p>An urban park perfect for family picnics, paddle-boating, or taking in nature in the heart of Bangkok.</p>
-                    <a href="https://www.tourismthailand.org/Attraction/Lumphini-Park" class="btn btn-primary" target="_blank">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-            <!-- 10 Recommended Things to Do -->
-            <section class="container mt-5">
-                <h2 class="text-center">10 More Recommended Things to Do</h2>
-                <ol>
-                    <li>Take a sunset cruise on the Chao Phraya River.</li>
-                    <li>Visit the Erawan Shrine for a spiritual experience.</li>
-                    <li>Explore Chinatown’s vibrant food scene.</li>
-                    <li>Take a cooking class and learn to make authentic Thai dishes.</li>
-                    <li>Enjoy street food at Yaowarat Road.</li>
-                    <li>Climb the Golden Mount for a panoramic view of the city.</li>
-                    <li>Discover contemporary art at the Bangkok Art and Culture Centre.</li>
-                    <li>Shop luxury brands at ICONSIAM or MBK Center for local goods.</li>
-                    <li>Catch a traditional Thai dance performance at the National Theatre.</li>
-                    <li>Relax and rejuvenate with a Thai massage at a local spa.</li>
-                </ol>
-            </section>
-    
-            <!-- Footer -->
-            <footer class="text-center mt-5 py-3 bg-light">
-                &copy 2024 Traveller's Guide to Thailand | Find the source code at 
-                <a href="https://github.com/Makoder/ITE120---Travel-Website" target="_blank">GitHub</a>
-            </footer>
-    
-            <!-- Bootstrap JS, Popper.js, and jQuery -->
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12W9gOAafl5+Dyoz23+i3TcI08LNkfn/tA1MZKI2tbQVPZWp" crossorigin="anonymous"></script>
-        </body>
-    </html>
+        <!-- JavaScript -->
+        <script>
+            function showDetails(attraction) {
+                alert("More details coming soon about " + attraction + "!");
+            }
+        </script>
+    </body>
+</html>
