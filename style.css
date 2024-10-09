@@ -206,6 +206,74 @@ footer a:hover {
 /*----- Thai Culture -----*/
 
 /*----- Information / Contact / Visas -----*/
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: gray;
+}
+.transport-option {
+    text-align: center;
+    z-index: 10;
+}
+
+.transport-option img {
+    display: block;
+    margin: 0 auto;
+    background-origin: padding-box;
+    border-style: solid;
+    border-color:  rgb(179, 0, 255);
+}
+
+.transport-option figure {
+    display: inline-block;
+    text-align: center;
+}
+
+.transport-option p {
+    text-align: center;
+    font-size: 30px; /* This will increase the font size */
+}
+
+.Visa-types h1  {    
+    text-align: center;
+    font-size: 2.5em; /* This will increase the font size */
+    background-color: rgb(179, 0, 255);
+    padding: 20px;
+    line-height: 2;
+    
+
+}
+
+
+.Visa-types p  {
+    font-size: 2em
+
+
+}
+.visa-type {
+    text-align: center;
+    background: #ecf0f1;
+    padding: 15px;
+    line-height: 3.5;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 3.5;
+}
+.visa-type h2 {
+    margin-top: 0;
+    font-size: 3em
+}
+.visa-im img {
+    display: block;
+    margin: auto;
+   
+    border-style: solid;
+    border-color:  rgb(179, 0, 255);
+    
+    
+}
+
+
 
 
 /*----- Media Queries for Responsivity */
@@ -270,6 +338,9 @@ footer a:hover {
 
     }
   
+}
+.transport-option h2 {
+    display: block;
 }
 /* COLOR CODES (in RGBa)
 PRIMARY (Yellow):  rgba(246, 217, 18, 50%)
