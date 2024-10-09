@@ -16,6 +16,7 @@ body {
 
 /*----- Heading Banner -----*/
 nav {
+    /* Sets the banner position at the top of the page */
     background-color: rgba(73, 43, 124, 1);
     z-index: 5;
     position: fixed;
@@ -24,6 +25,7 @@ nav {
     
 }
 nav ul {
+    /* Horizontally places the menu items */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -31,18 +33,28 @@ nav ul {
 
 }
 nav a {
+    /* Formats the menu items */
     color: white;
     padding: 0.5rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
+nav .title {
+    /* Creates a title that will appear on smaller screens */
+    color: white;
+    display: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
 .toggler {
+    /* Controls a toggler icon that will display on smaller screens to activate the menu */
     cursor: pointer;
     display: none;
     color: white;
 }
 .active a, nav a:hover {
+    /* Helps the user identify what links are clickable */
     background-color: white;
     border-radius: 10%;
     color: rgba(73, 43, 124, 1);
@@ -52,6 +64,8 @@ nav a {
 /*----- Slideshow -----*/
 #slideshow {
     overflow: hidden;
+    position: relative;
+    display: inline-block;
 }
 #slideshow figure {
     position: relative;
@@ -61,9 +75,12 @@ nav a {
     animation: 20s slider infinite;
 }
 #slideshow figure img {
+    /* Puts the image in a container */
+    display: block;
     float: left;
     width: 20%;
-    height: 56.2em;
+    aspect-ratio: 16/9;
+    height: auto;
 }
 @keyframes slider {
     /* Animates the slideshow */
@@ -86,29 +103,38 @@ nav a {
     transform: translate(-50%, -50%);
     /* Formats the title */
     color:white;
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: bold;
     z-index: 2; 
     text-shadow: -4px 4px 10px black;
 }
 /* Adds an overlay to the slideshow */
 .overlay {
+    /* Overlay Information */
     position: absolute;
     bottom: 0;
     width: 100%;
-    max-height: 20%;
     background-color: rgba(237, 138, 10, 0.6);
     padding: 20px;
     z-index: 2;
     box-shadow: 0px -4px 10px black;
-}
-.overlay p {
+    /* Text Information */
+    text-align: center;
     font-size: 1.8rem;
+    color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+.overlay p {
+    position: relative;
+    text-align: center;
+    font-size: 1.8rem;
+    margin: auto;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 /*---- Home - Highlights ---- */
 .highlight {
+    position: relative;
     font-size: 2rem;
     margin-left: 2%;
     font-weight: bolder;
@@ -131,17 +157,18 @@ nav a {
 }
 .highlight-element h3 {
     text-align: center;
+    margin: auto;
     font-weight: bold;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .highlight-element a img {
-    width: 24em;
-    height: 18em;
+    max-width: 20rem;
+    max-height: auto;
     border: 0.2em solid black;
     border-radius: 10%;
     box-shadow: 0.5em 0.5em 2em black;
-    margin: 3em;
+    margin: 2em auto;
 }
 .highlight-element a img:hover {
     box-shadow: 1.5em 1.5em 2em black;
@@ -175,97 +202,14 @@ footer a:hover {
     color: rgba(73, 43, 124, 1);
 }
 /*----- Tourist Hotspots -----*/
-body {
-    background-image: url('data:image/jpeg;base64,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');
-    background-size: cover;
-    background-position: center;
-    color: #333;
-}
-
-#travel-tips {
-    background-image: url('https://cdn.pixabay.com/photo/2016/11/14/03/16/thailand-1823193_960_720.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
-    color: white;
-}
-
-#travel-tips h2, #travel-tips p {
-    text-align: center;
-    font-size: 1.5rem;
-}
-
-#travel-tips p {
-    width: 80%;
-    margin: 0 auto;
-}
 
 /*----- Thai Culture -----*/
-.culture-section {
-    background-image: url('https://www.dailyartmagazine.com/wp-content/uploads/2021/10/The-Khon-Classical-Thai-Mask-Dance-show-hero.LUT-OPT-D-scaled.jpg'); /* Culture section image */
-    background-size: cover;
-    background-position: center;
-    padding: 80px 0;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-.culture-section h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.culture-section p {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Info Section */
-.info-section {
-    background-image: url('https://www.dailyartmagazine.com/wp-content/uploads/2020/07/Thai-Classical-Dance-Khon-Puppet-at-Asia-Society-New-York-musical-instruments.LUT-OPT-1024x621.jpg'); /* Info section image */
-    background-size: cover;
-    background-position: center;
-    color: white; 
-    padding: 50px 0; 
-}
-
-.info-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    color: #007bff;
-}
-
-.info-section .card {
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for cards */
-}
-
-.info-section .card img {
-    height: 250px;
-    object-fit: cover;
-}
-
-.info-section .card-body {
-    padding: 20px;
-}
-
-.info-section .card-title {
-    font-size: 1.5rem;
-    color: #007bff;
-}
 
 /*----- Information / Contact / Visas -----*/
 
 
 /*----- Media Queries for Responsivity */
-@media (max-width: 1692px) {
+@media (max-width: 1200px) {
     .highlight-container {
         flex-direction: column;
     }
@@ -276,7 +220,7 @@ body {
         font-size: 1.6rem;
     }
     footer {
-        height:4em;
+        height:5em;
     }
 }
 
@@ -287,6 +231,13 @@ body {
     nav ul {
         padding: 0.5rem;
         flex-wrap: wrap;
+    }
+    nav .title {
+        display: flex;
+        flex-direction: row; /* Change to row for horizontal layout */
+        align-items: center;
+        justify-content: center; /* Center it horizontally */
+        width: 100%; 
     }
     .toggler {
         display: flex;
@@ -300,14 +251,25 @@ body {
     .switch {
         display: block;
     }
+    .slide-title {
+        display: none;
+    }
+    .overlay p {
+        font-size: 1.4rem;
+    }
 }
 @media (max-width: 480px) {
     .overlay {
         padding: 10px;
     }
     .overlay p {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
+    .highlight-element a img {
+        max-width: 15rem;
+
+    }
+  
 }
 /* COLOR CODES (in RGBa)
 PRIMARY (Yellow):  rgba(246, 217, 18, 50%)
