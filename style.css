@@ -325,6 +325,10 @@ figcaption {
     .overlay p {
         font-size: 1.4rem;
     }
+    .highlight-element a img {
+        max-width: 10rem;
+
+    }
 }
 @media (max-width: 480px) {
     .overlay {
@@ -333,10 +337,7 @@ figcaption {
     .overlay p {
         font-size: 1rem;
     }
-    .highlight-element a img {
-        max-width: 15rem;
-
-    }
+   
   
 }
 .transport-option h2 {
